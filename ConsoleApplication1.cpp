@@ -81,38 +81,27 @@ int main()
     */
 
     //4. Написать функцию для подсчета гласных букв в тексте, введенном с клавиатуры
-
-    //_TCHAR str[100];
-    //cout << "Enter a sentence: ";
-    //wcin.getline(str, 100);
-    //int vowel = 0;
-    //int vowels[16] = { 63, 161, 168, 169, 183, 184, 214, 215, 222, 224, 231, 232, 241, 242, 247, 248 };
-
-
-    //for (int i = 0; i < _tcslen(str); i++)
-    //{
-    //    /*for (int j = 0; j < 16; j++)
-    //    {
-    //        if (str[i] == vowels[j]) {
-    //            vowel++;
-    //        }
-    //    }*/
-
-    //    if (str[i] == 160) {
-    //        vowel++;
-    //    }
-    //}
-
-
-    //cout << "Amount of vowels: " << vowel << endl;
+    /*
+    _TCHAR str[100];
+    cout << "Напиши предложение: ";
+    wcin.getline(str, 100);
+    int letter = 0;
+    int letters[] = {63, 161, 168, 169, 183, 184, 214, 215, 222, 224, 231, 232, 241, 242, 247, 248 };
+    for (int i = 0; i < _tcslen(str); i++)
+    {
+        if (str[i] == 160) {
+            letter++;
+        }
+    }
+    cout << "Число букв: " << letter << endl;
+    */
 
     //5. Дана строка символов. Проверить, является ли эта строка палиндромом
 
-    /*_TCHAR str[] = _TEXT("rats live on no evil star");
-    wcout << str << '\n';
+    /*_TCHAR str[] = _TEXT("privet tevirp");
+    wcout << str;
     int len = _tcslen(str)-1;
     int check = 0;
-
     for (int i = 0; i < _tcslen(str)/2; i++)
     {
         if (str[i] == str[len]) {
@@ -120,140 +109,119 @@ int main()
         }
         --len;
     }
-
     if (check == len) {
-        wcout << "yes! It`s a palindrome!" << '\n';
+        wcout << "Да";
     }
     else {
-        wcout << "no! It`s not a palindrome!" << '\n';
+        wcout << "Нет";
     }*/
 
 
     //6.Написать функцию, которая удаляет из строки символ с заданным номером
+/*
+    _TCHAR str[] = _TEXT("AUDI FOREWER. NO SOMETIME - ALWAYS");
+    wcout << str;
+    int num;
+    wcout << "Введи число от 0 до 32" ;
+    wcin >> num;
+    int j = 0;
+    const int len = _tcslen(str);
+    _TCHAR *rez = new _TCHAR[len];
+    for (int i = 0; i < _tcslen(str); i++)
+    {
+        if (j == len)
+        {
+            rez[j] = '/0';
+        }
+        else
+        {
+            if (i != num)
+            {
+                rez[j] = str[i];
+                j++;
+            }
+            else
+            {
+            }
+        }
+    }
 
-    //_TCHAR str[] = _TEXT("hello, everyone!");
-    //wcout << str << '\n';
-    //
-    //int num;
-    //wcout << "Enter number from 0 to " << _tcslen(str) - 1 << ": ";
-    //wcin >> num;
-    //int j = 0;
-    //const int len = _tcslen(str);
-
-    //_TCHAR *rez = new _TCHAR[len];
-
-    //for (int i = 0; i < _tcslen(str); i++)
-    //{
-
-    //    if (j == len)
-    //    {
-    //        rez[j] = '/0';
-    //    }
-    //    else
-    //    {
-    //        if (i != num)
-    //        {
-    //            rez[j] = str[i];
-    //            j++;
-    //        }
-    //        else
-    //        {
-
-    //        }
-    //    }
-    //}
-
-    //wcout << "Result: " << rez << endl;
-    //delete[] rez;
-
+    wcout << rez << endl;
+    delete[] rez;
+    */
 
     //7. Написать функцию, которая удаляет из строки все вхождения в нее заданного символа
-
-    //_TCHAR str[] = _TEXT("hello, everyone!");
-    //wcout << str << '\n';
-    //
-    //_TCHAR ch;
-    //wcout << "Enter a symbol:  ";
-    //wcin >> ch;
-    //int j = 0;
-    //int len = 0;
-    //for (int i = 0; i < _tcslen(str); i++)
-    //{
-    //    if (str[i] != str[ch])
-    //    {
-    //        len++;
-    //    }
-    //}
-
-    //_TCHAR *rez = new _TCHAR[len+1];
-
-    //for (int i = 0; i < _tcslen(str); i++)
-    //{
-    //    if (str[i] != ch)
-    //    {
-    //        if (j == len)
-    //        {
-    //            rez[j] = '/0';
-    //        }
-    //        else 
-    //        {
-    //            rez[j] = str[i];
-    //            j++;
-    //        }
-    //    }
-    //   
-    //}
-
-    //wcout << "Result: " << rez << endl;
-    //delete[] rez;
-
+/*
+    _TCHAR str[] = _TEXT("AUDI FOREWER. NO SOMETIME - ALWAYS");
+    wcout << str;
+    _TCHAR ch;
+    wcout << "Введи символ:";
+    wcin >> ch;
+    int j = 0;
+    int len = 0;
+    for (int i = 0; i < _tcslen(str); i++)
+    {
+        if (str[i] != str[ch])
+        {
+            len++;
+        }
+    }
+    _TCHAR *rez = new _TCHAR[len+1];
+    for (int i = 0; i < _tcslen(str); i++)
+    {
+        if (str[i] != ch)
+        {
+            if (j == len)
+            {
+                rez[j] = '/0';
+            }
+            else 
+            {
+                rez[j] = str[i];
+                j++;
+            }
+        }
+    }
+    wcout  << rez << endl;
+    delete[] rez;
+    */
 
     //8. Написать функцию, которая вставляет в строку в указанную позицию заданный символ
-
-    //_TCHAR str[] = _TEXT("hello, everyone!");
-    //wcout << str << '\n';
-    //
-    //_TCHAR ch;
-    //int pos;
-    //wcout << "Enter a symbol:  ";
-    //wcin >> ch;
-    //wcout << "Enter a position: ";
-    //wcin >> pos;
-
-    //int j = 0;
-    //int len = _tcslen(str)+1;
-    //
-    //_TCHAR *rez = new _TCHAR[len];
-
-    //for (int i = 0; i < _tcslen(str)+1; i++)
-    //{
-
-    //    if (j == len - 1)
-    //    {
-    //        rez[j] = '/0';
-    //    }
-    //    else
-    //    {
-    //        if (i != pos)
-    //        {
-    //            rez[j] = str[i];
-    //            j++;
-    //        }
-    //        else 
-    //        {
-    //            //to change symbol
-    //            rez[j] = ch;
-    //            j++;
-
-    //            //to add symbol
-    //            rez[j + 1] = str[i];
-    //            j++;
-    //        }
-    //    }
-    //    
-    //   
-    //}
-
-    //wcout << "Result: " << rez << endl;
-    //delete[] rez;
+    /*
+    _TCHAR str[] = _TEXT("AUDI FOREWER. NO SOMETIME - ALWAYS");
+    wcout << str;
+    _TCHAR ch;
+    int pos;
+    wcout << "Введи символ:  ";
+    wcin >> ch;
+    wcout << "Введи позицию: ";
+    wcin >> pos;
+    int j = 0;
+    int len = _tcslen(str)+1;
+    _TCHAR *rez = new _TCHAR[len];
+    for (int i = 0; i < _tcslen(str)+1; i++)
+    {
+        if (j == len - 1)
+        {
+            rez[j] = '/0';
+        }
+        else
+        {
+            if (i != pos)
+            {
+                rez[j] = str[i];
+                j++;
+            }
+           else 
+            {
+                rez[j] = ch;
+                j++;
+                rez[j + 1] = str[i];
+                j++;
+            }
+        }  
+    }
+    wcout << rez << endl;
+    delete[] rez;
+    */
 }
